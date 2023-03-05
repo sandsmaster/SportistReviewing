@@ -6,8 +6,12 @@ class Sportist(models.Model):
     name = models.CharField(max_length=70, null=False)
     age = models.IntegerField(default=(-1))
     sport = models.CharField(max_length=48)
-    bio = models.TextField(blank=True, null=True)
+    bio = models.TextField(blank=True, null=True, max_length=255)
     still_playing = models.BooleanField()
 
     def __str__(self):
         return self.name
+
+
+    def save(self, *args, **kwargs):
+        super(Sportist, self).save(*args, **kwargs)
