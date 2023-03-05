@@ -1,6 +1,14 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Sportist
+
 
 # Create your views here.
 def list_sportists(request):
-    return HttpResponse(request.user.username)
+
+    sportists = Sportist.objects.exclude(sport__isnull=True)
+
+    context = {
+        'sps': sportists,
+    }
+
+    return render(request, 'sportisti.html', context)
