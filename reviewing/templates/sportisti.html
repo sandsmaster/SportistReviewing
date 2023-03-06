@@ -1,21 +1,6 @@
-{% load static %}
+{% extends "base.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="{% static 'reviewing/style/main.css' %}">
-</head>
-<body>
-<header>
-    <ul class="head-menu">
-        <li>Home</li>
-        <li>About Us</li>
-        <li>Contacts</li>
-    </ul>
-</header>
-<main>
+{% block content %}
     <h1 class="title-opener">Искаш ли да разбереш кои са най-яките спортисти за годината?</h1>
     {% for item in sps %}
         <hr />
@@ -47,6 +32,4 @@
             </div>
         </div>
     {% endfor %}
-</main>
-</body>
-</html>
+{% endblock %}

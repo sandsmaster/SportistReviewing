@@ -1,21 +1,5 @@
-{% load static %}
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="{% static 'reviewing/style/main.css' %}">
-</head>
-<body>
-<header>
-    <ul class="head-menu">
-        <a href="{% url 'sportists' %}"><li>Home</li></a>
-        <li>About Us</li>
-        <li>Contacts</li>
-    </ul>
-</header>
-<main>
+{% extends "base.html" %}
+{% block content %}
 <div class="single-main">
     <img src="{{ sportist.image.url }}" />
     <h2>{{ sportist.name }}</h2>
@@ -27,6 +11,4 @@
         <li><b>Active:</b>{{ sportist.still_playing }}</li>
     </ul>
 </div>
-</main>
-</body>
-</html>
+{% endblock %}

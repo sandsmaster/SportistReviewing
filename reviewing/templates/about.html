@@ -1,22 +1,4 @@
-{% load static %}
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="{% static 'reviewing/style/main.css' %}">
-</head>
-<body>
-<header>
-    <ul class="head-menu">
-        <li>Home</li>
-        <li>About Us</li>
-        <li>Contacts</li>
-    </ul>
-</header>
-<main>
+{% extends "base.html" %}
+{% block content %}
     <h1>Wait for more progress on the site</h1>
-</main>
-</body>
-</html>
+{% endblock %}
