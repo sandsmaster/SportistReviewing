@@ -24,6 +24,15 @@ def show_about(request):
     return render(request, 'about.html', context)
 
 
+def show_contacts(request):
+
+    context = {
+
+    }
+
+    return render(request, 'contacts.html', context)
+
+
 class SingleSportistView(DetailView):
     model = Sportist
     template_name = "sportist.html"
