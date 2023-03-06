@@ -2,7 +2,9 @@
 {% block content %}
     {% for contrib in conts %}
     <div class="cont-avatar">
-        <img class="avatar" src="{{contrib.image.url}}" />
+        <a href="{% url 'contrib-detail' contrib.pk %}">
+            <img class="avatar" src="{{contrib.image.url}}" />
+        </a>
         <h2>{{contrib.name}}</h2>
         <h3>{{contrib.role}}</h3>
     </div>

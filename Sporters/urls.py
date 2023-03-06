@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include, re_path
-from reviewing.views import list_sportists, SingleSportistView, show_about
+from reviewing.views import list_sportists, SingleSportistView, show_about, SingleContributorView
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -25,5 +25,6 @@ urlpatterns = [
     path('about/', show_about, name='about-us'),
     path('__debug__/', include('debug_toolbar.urls')),
     re_path('sportist/(?P<pk>[0-9]+)/', SingleSportistView.as_view(), name='sportist-detail'),
+re_path('contributor/(?P<pk>[0-9]+)/', SingleContributorView.as_view(), name='contrib-detail'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

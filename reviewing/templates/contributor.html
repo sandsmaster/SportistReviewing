@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <div class="cont-avatar-2">
+        <h1>{{ contributor.name }}</h1>
+        <img class="avatar" src="{{ contributor.image.url }}">
+        <h2>{{ contributor.role }}</h2>
+    </div>
+    <p>
+        {{ contributor.bio }}
+    </p>
+</div>
+{% endblock %}

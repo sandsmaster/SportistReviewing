@@ -27,3 +27,8 @@ def show_about(request):
 class SingleSportistView(DetailView):
     model = Sportist
     template_name = "sportist.html"
+
+
+class SingleContributorView(DetailView):
+    model = Contributor
+    template_name = "contributor.html"
