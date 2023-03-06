@@ -16,7 +16,7 @@ def list_sportists(request):
 
 def show_about(request):
 
-    contributors = Contributor.objects.exclude(email__isnull=True)
+    contributors = Contributor.objects.exclude(name__isnull=True)
     context = {
         "conts": contributors
     }

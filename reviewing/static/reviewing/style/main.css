@@ -85,6 +85,15 @@ main {
     max-width: 50%;
 }
 
+.cont-avatar {
+    text-align: center;
+    display: inline-block;
+    max-width: 32%;
+    max-height: 400px;
+    margin: 0px;
+    margin-top: 30px;
+}
+
 .avatar {
     width: 200px;
     height: 200px;

@@ -1,4 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-    {{conts}}
+    {% for contrib in conts %}
+    <div class="cont-avatar">
+        <img class="avatar" src="{{contrib.image.url}}" />
+        <h2>{{contrib.name}}</h2>
+        <h3>{{contrib.role}}</h3>
+    </div>
+    {% endfor %}
 {% endblock %}
