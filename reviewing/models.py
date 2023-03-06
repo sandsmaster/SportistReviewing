@@ -13,6 +13,14 @@ class Sportist(models.Model):
     def __str__(self):
         return self.name
 
-
     def save(self, *args, **kwargs):
         super(Sportist, self).save(*args, **kwargs)
+
+
+class Contributor(models.Model):
+    name = models.CharField(max_length=70, null=False)
+    role = models.CharField(max_length=100, null=False)
+    image = models.ImageField(null=True, blank=True)
+    email = models.EmailField(null=True, blank=True, max_length=100)
+    socials = models.TextField(null=True, blank=True, help_text='Social media profiles, on separate lines')
+    bio = models.TextField(blank=True, null=True, max_length=255)
