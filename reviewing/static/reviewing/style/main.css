@@ -1,7 +1,7 @@
 {% load static %}
 
 body {
-    background-color: #773;
+    background-color: black;
     background-image: url("/static/reviewing/images/main_back.jpg");
     margin: 0px;
     padding 0px;
@@ -31,7 +31,7 @@ header {
 
 .head-menu li {
     float: left;
-    color: #58e;
+    color: white;
     border-radius: 10px;
     padding: 10px;
     margin-right: 30px;
@@ -40,6 +40,7 @@ header {
 
 .head-menu li:hover {
     background-color: #efe;
+    color: black;
 }
 
 main {
@@ -95,7 +96,7 @@ main {
 }
 
 .cont-avatar-2 {
-    background-color: #034f84;
+    background-color: black;
     color: white;
     text-align: center;
     border: 1px solid black;
