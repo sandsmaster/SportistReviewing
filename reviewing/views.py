@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Sportist
+from .models import Sportist, Contributor
 from django.views.generic import DetailView
 
 
@@ -16,9 +16,9 @@ def list_sportists(request):
 
 def show_about(request):
 
-    #sportists = Sportist.objects.exclude(sport__isnull=True)
+    contributors = Contributor.objects.exclude(email__isnull=True)
     context = {
-
+        "conts": contributors
     }
 
     return render(request, 'about.html', context)

@@ -22,7 +22,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', list_sportists, name='sportists'),
-    path('about/', show_about, name='about-sports'),
+    path('about/', show_about, name='about-us'),
     path('__debug__/', include('debug_toolbar.urls')),
     re_path('sportist/(?P<pk>[0-9]+)/', SingleSportistView.as_view(), name='sportist-detail'),
 
