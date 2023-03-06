@@ -3,6 +3,8 @@
 body {
     background-color: black;
     background-image: url("/static/reviewing/images/main_back.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
     margin: 0px;
     padding 0px;
     font-family: Arial;
@@ -36,6 +38,7 @@ header {
     padding: 10px;
     margin-right: 30px;
     font-weight: bold;
+    transition-duration: 1s;
 }
 
 .head-menu li:hover {
