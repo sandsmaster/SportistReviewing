@@ -23,7 +23,7 @@ class Contributor(models.Model):
     image = models.ImageField(null=True, blank=True)
     email = models.EmailField(null=True, blank=True, max_length=100)
     socials = models.TextField(null=True, blank=True, help_text='Social media profiles, on separate lines')
-    bio = models.TextField(blank=True, null=True, max_length=255)
+    bio = models.TextField(blank=True, null=True, max_length=421)
 
     def __str__(self):
         return self.name
