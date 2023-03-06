@@ -14,6 +14,16 @@ def list_sportists(request):
     return render(request, 'sportisti.html', context)
 
 
+def show_about(request):
+
+    #sportists = Sportist.objects.exclude(sport__isnull=True)
+    context = {
+
+    }
+
+    return render(request, 'about.html', context)
+
+
 class SingleSportistView(DetailView):
     model = Sportist
     template_name = "sportist.html"
