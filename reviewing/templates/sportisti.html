@@ -1,38 +1,36 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        body{
-            background-color: #773;
-        }
-
-        main{
-            background-color: #efe;
-            border-radius: 10px;
-            max-width: 70%;
-            margin: auto;
-            margin-top: 50px;
-            padding: 20px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="{% static 'reviewing/style/main.css' %}">
 </head>
 <body>
+<header>
+    <ul class="head-menu">
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Contacts</li>
+    </ul>
+</header>
 <main>
-    <h1>Искаш ли да разбереш кои са най-яките спортисти за годината?</h1>
+    <h1 class="title-opener">Искаш ли да разбереш кои са най-яките спортисти за годината?</h1>
     {% for item in sps %}
         <hr />
-        <div>
+        <div class="sportist">
             <h2>{{ item.name }}</h2>
+            <a href="{% url 'sportist-detail' item.pk %}">
+                <img class="avatar" src="{{ item.image.url }}" />
+            </a>
             <p>
-                Age: {{ item.age }}
+                <b>Age:</b> {{ item.age }}
                 Sport: {{ item.sport }}
                 <br />
-                Still playing?: {{ item.still_playing }}
-                <br />
-                A few words about him:
+                <b>Still playing?:</b> {{ item.still_playing }}
+                <br /><br />
+                <b>A few words about him:</b>
                 <br /> {{ item.bio }}
             </p>
         </div>

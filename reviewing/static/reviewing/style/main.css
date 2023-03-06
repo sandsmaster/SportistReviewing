@@ -1,0 +1,72 @@
+{% load static %}
+
+body {
+    background-color: #773;
+    background-image: url("/static/reviewing/images/main_back.jpg");
+    margin: 0px;
+    padding 0px;
+    font-family: Arial;
+}
+
+header {
+    background-color: #7c8;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    min-height: 100px;
+    box-shadow: 0px 1px 5px 5px
+}
+
+.head-menu {
+    font-size: 20px;
+    font-family: Arial;
+    list-style-type: none;
+}
+
+.head-menu li {
+    float: left;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+.head-menu li:hover {
+    background-color: #efe;
+}
+
+main {
+    background-color: #efe;
+    border-radius: 10px;
+    max-width: 70%;
+    margin: auto;
+    margin-top: 150px;
+    padding: 20px;
+}
+
+.title-opener {
+    text-align: center;
+}
+
+.single-main img {
+    max-width: 65%;
+    max-height: 500px;
+    border-radius: 25px;
+}
+
+.single-main ul {
+    list-style-type: none;
+}
+
+.single-main {
+    text-align: center;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    border-radius: 50%;
+}

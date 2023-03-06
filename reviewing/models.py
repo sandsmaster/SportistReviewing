@@ -8,6 +8,7 @@ class Sportist(models.Model):
     sport = models.CharField(max_length=48)
     bio = models.TextField(blank=True, null=True, max_length=255)
     still_playing = models.BooleanField()
+    image = models.ImageField(null=True)
 
     def __str__(self):
         return self.name
