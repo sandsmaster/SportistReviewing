@@ -24,3 +24,9 @@ class Contributor(models.Model):
     email = models.EmailField(null=True, blank=True, max_length=100)
     socials = models.TextField(null=True, blank=True, help_text='Social media profiles, on separate lines')
     bio = models.TextField(blank=True, null=True, max_length=255)
+
+    def __str__(self):
+        return self.name
+
+    def save(self, *args, **kwargs):
+        super(Contributor, self).save(*args, **kwargs)
