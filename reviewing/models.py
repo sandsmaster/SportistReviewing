@@ -23,10 +23,20 @@ class Contributor(models.Model):
     image = models.ImageField(null=True, blank=True)
     email = models.EmailField(null=True, blank=True, max_length=100)
     socials = models.TextField(null=True, blank=True, help_text='Social media profiles, on separate lines')
-    bio = models.TextField(blank=True, null=True, max_length=421)
+    bio = models.TextField(blank=True, null=True, max_length=921)
 
     def __str__(self):
         return self.name
 
     def save(self, *args, **kwargs):
         super(Contributor, self).save(*args, **kwargs)
+
+
+class Highlights(models.Model):
+    title = models.CharField(max_length=300)
+    url = models.CharField(null=True, blank=True, max_length=900)
+    description = models.TextField(null=True, blank=True, max_length=1200)
+    sportist = models.ForeignKey(Sportist, on_delete=models.DO_NOTHING)
+
+    def __str__(self):
+        return self.title
