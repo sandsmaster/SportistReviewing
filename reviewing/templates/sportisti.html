@@ -32,7 +32,7 @@
                 <h2>Best highlights:</h2>
                 <ul>
                 {% for high in item.highlights_set.all %}
-                    <li><a href="{{high.url}}">{{ high.title }}</a>
+                    <li><a href="{{high.url}}" target="_blank">{{ high.title }}</a>
                         <p>{{high.description}}</p>
                     </li>
                 {% endfor %}

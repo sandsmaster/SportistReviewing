@@ -121,6 +121,13 @@ main {
 
 .sps-info a {
     text-decoration: underline;
+    padding: 5px;
+    transition-duration: 0.5s;
+}
+
+.sps-info a:hover {
+    border: 1px solid black;
+    border-radius: 10px;
 }
 
 footer {
